@@ -157,6 +157,8 @@ a:active {
     margin: 0 auto;
     border: solid #777 3px;
     background-color: rgb(243, 243, 243);
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .login100-form-avatar img {
