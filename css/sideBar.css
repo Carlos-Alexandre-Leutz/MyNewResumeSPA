@@ -37,6 +37,17 @@
     top: 0px;
 }
 
+@media screen and (max-width: 768px) {
+    .fexar {
+        transition: .2s;
+        margin-left: -290px;
+    }
+    .abrir {
+        transition: .2s;
+        margin-left: 0px;
+    }
+}
+
 .main {
     margin-left: 300px;
 }
