@@ -37,14 +37,61 @@
     top: 0px;
 }
 
+
+/* icone menu hamburguer*/
+
+.icoenMenu {
+    display: none;
+}
+
+.menuH {
+    display: block;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.menuH img {
+    width: 100%;
+}
+
+.main {
+    margin-left: 300px;
+    transition: .2s;
+}
+
 @media screen and (max-width: 768px) {
     .fexar {
         transition: .2s;
-        margin-left: -290px;
+        margin-left: -300px;
     }
     .abrir {
         transition: .2s;
         margin-left: 0px;
+    }
+    .icoenMenu {
+        display: block;
+        background-color: #fff;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        margin-top: 15px;
+    }
+    .iconeDentro {
+        position: absolute;
+        margin-left: 240px;
+        transition: .2s;
+    }
+    .iconeFora {
+        position: absolute;
+        margin-left: 310px;
+        transition: .2s;
+    }
+    .main {
+        margin-left: 10px;
+        transition: .2s;
     }
 }
 

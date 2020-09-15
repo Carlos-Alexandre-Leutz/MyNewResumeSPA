@@ -79,6 +79,13 @@
 <body ng-app="App" class="flex font">
 
     <div class="sideBar abrir">
+        <div class="icoenMenu iconeDentro">
+
+
+            <span class="menuH">
+              <img src="imagens/menu.png" alt="">
+          </span>
+        </div>
         <span class="login100-form-avatar m-t-15 m-b-15 ">
             <img src="imagens/8116484e-bd7d-40c2-9509-70c6705ba4e5.png" alt="AVATAR">
         </span>
@@ -223,6 +230,7 @@
 
     <!--criar função que fexe o nenu quando cricar em um link-->
     <!--funçao para abrir modal com algun aviso a 10 segundos depois de garegar a pagina e um outro quando sair  -->
+    <!--Fazer um menu hamburguer que fica emcima da sidebar mais deposi que ela se esonde fina na tela-->
 
     <script>
         $(".sideBar").click(function() {
@@ -240,6 +248,25 @@
                 console.log('else')
             }
 
+
+        })
+        $(".icoenMenu").click(function() {
+
+            if ($('.icoenMenu').hasClass('iconeDentro')) {
+
+                $('.icoenMenu').addClass('iconeFora');
+                $('.icoenMenu').removeClass('iconeDentro');
+
+
+
+
+            } else {
+
+                $('.icoenMenu').removeClass('iconeFora');
+                $('.icoenMenu').addClass('iconeDentro');
+
+
+            }
 
         })
     </script>
