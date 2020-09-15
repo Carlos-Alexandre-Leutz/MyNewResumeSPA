@@ -78,6 +78,7 @@
         height: 50px;
         border-radius: 5px;
         margin-top: 15px;
+        border: solid 2px #999;
     }
     .iconeDentro {
         position: absolute;
