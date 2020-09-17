@@ -1,17 +1,84 @@
-<form action="script.php" method="post">
+<!--
+
+    <form action="script.php" method="post">
+        
+        
+        
+        <div class="form-group">
+            <label class="FonteTexto" for="form-control">mensagem</label>
+            <input type="text" class="form-control" name="mensagem">
+        </div>
+        
+        
+        <input class="botaoDonload2" type="submit" name="enviar" value="Enviar">
+        
+    </form>
+-->
 
 
 
-    <div class="form-group">
-        <label class="FonteTexto" for="form-control">mensagem</label>
-        <input type="text" class="form-control" name="mensagem">
-    </div>
 
 
-    <input class="botaoDonload2" type="submit" name="enviar" value="Enviar">
 
+
+<form id="my-form" action="https://formspree.io/xknpwago" method="POST">
+    <label>Email:</label>
+    <input type="email" name="email" />
+    <label>Message:</label>
+    <input type="text" name="message" />
+    <button id="my-form-button">Submit</button>
+    <p id="my-form-status"></p>
 </form>
 
+<!-- Place this script at the end of the body tag -->
+
+<script>
+    window.addEventListener("DOMContentLoaded", function() {
+
+        // get the form elements defined in your form HTML above
+
+        var form = document.getElementById("my-form");
+        var button = document.getElementById("my-form-button");
+        var status = document.getElementById("my-form-status");
+
+        // Success and Error functions for after the form is submitted
+
+        function success() {
+            form.reset();
+            button.style = "display: none ";
+            status.innerHTML = "Obrigado";
+        }
+
+        function error() {
+            status.innerHTML = "Oops! There was a problem.";
+        }
+
+        // handle the form submission event
+
+        form.addEventListener("submit", function(ev) {
+            ev.preventDefault();
+            var data = new FormData(form);
+            ajax(form.method, form.action, data, success, error);
+        });
+    });
+
+    // helper function for sending an AJAX request
+
+    function ajax(method, url, data, success, error) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            if (xhr.status === 200) {
+                success(xhr.response, xhr.responseType);
+            } else {
+                error(xhr.status, xhr.response, xhr.responseType);
+            }
+        };
+        xhr.send(data);
+    }
+</script>
 <!-- esperar 10segundos antes de edirecionar de novo para o meu curiculo e diser obrigado po entrar en contato-->
 
 <a target="blank" href="malito:leutzelutz@gmail.com"> leutzeleutz@gmail.com</a>

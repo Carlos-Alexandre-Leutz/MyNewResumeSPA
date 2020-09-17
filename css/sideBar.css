@@ -32,9 +32,10 @@
     background-image: linear-gradient( to right, #777, #999);
     height: 100%;
     width: 300px;
-    position: fixed;
+    position: absolute;
     transition: .2s;
     top: 0px;
+    z-index: 1;
 }
 
 

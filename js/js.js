@@ -44,11 +44,14 @@ $(function() {
     $(window).on("scroll", function() {
         if ($(window).scrollTop() > 10) {
             $(".sidebar-hiden").addClass("sidebar-show");
+            console.log('ola')
         } else {
             $(".sidebar-hiden").removeClass("sidebar-show");
+            console.log('no')
         }
     });
 });
+
 
 
 $(".1").click(function() {
