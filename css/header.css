@@ -1,0 +1,13 @@
+.sidebar-show {
+    background: #999 !important;
+    transition: all 0.5s;
+    height: 60px;
+}
+
+.sidebar-hiden {
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    transition: all 0.5s;
+    height: 60px;
+}

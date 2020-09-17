@@ -1,0 +1,13 @@
+.main {
+    margin-left: 310px;
+    transition: .2s;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        margin-left: 10px;
+        transition: .2s;
+        width: 100%;
+    }
+}
