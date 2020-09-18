@@ -44,10 +44,12 @@ $(function() {
     $(window).on("scroll", function() {
         if ($(window).scrollTop() > 10) {
             $(".sidebar-hiden").addClass("sidebar-show");
-            console.log('ola')
+            $(".btnContato").addClass("btnContatoB");
+
+
         } else {
             $(".sidebar-hiden").removeClass("sidebar-show");
-            console.log('no')
+            $(".btnContato").removeClass("btnContatoB");
         }
     });
 });
