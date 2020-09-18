@@ -1,205 +1,110 @@
-/*//////////////////////////////////////////////////////////////////
-[ FONT ]*/
-
-@font-face {
-    font-family: Poppins-Regular;
-    src: url('../fonts/poppins/Poppins-Regular.ttf');
-}
-
-@font-face {
-    font-family: Poppins-Medium;
-    src: url('../fonts/poppins/Poppins-Medium.ttf');
-}
-
-@font-face {
-    font-family: Poppins-Bold;
-    src: url('../fonts/poppins/Poppins-Bold.ttf');
-}
-
-@font-face {
-    font-family: Poppins-SemiBold;
-    src: url('../fonts/poppins/Poppins-SemiBold.ttf');
-}
-
-.font {
-    font-family: Poppins-SemiBold;
-}
-
-
-/*//////////////////////////////////////////////////////////////////*/
-
-.sideBar {
-    background-image: linear-gradient( to right, #777, #999);
-    height: 100%;
-    width: 300px;
-    position: fixed;
-    transition: .2s;
-    top: 0px;
-    z-index: 1;
-}
-
-
-/* icone menu hamburguer*/
-
-.icoenMenu {
-    display: none;
-}
-
-.menuH {
-    display: block;
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
-    margin: 0 auto;
-    margin-top: 5px;
-}
-
-.menuH img {
-    width: 100%;
-}
-
-.linkPages {
-    color: #333;
-    text-decoration-line: none;
-}
-
-a:link {
-    color: #333;
-}
-
-
-/* link que foi visitado */
-
-a:visited {
-    color: #333;
-}
-
-
-/* mouse over */
-
-a:hover {
-    color: #000000;
-}
-
-
-/* link selecionado */
-
-a:active {
-    color: #333;
-}
-
-.pages {
-    /*transição de paginas*/
-}
-
-.login100-form-avatar {
-    display: block;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto;
-    border: solid #777 3px;
-    background-color: rgb(243, 243, 243);
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.login100-form-avatar img {
-    width: 100%;
-}
-
-.nome {
-    font-size: 20px;
-}
-
-.funcao {
-    font-size: 15px;
-}
-
-.risco {
-    width: 80%;
-    margin: auto;
-    height: 4px;
-    background-color: rgb(243, 243, 243);
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-.traco {
-    width: 100%;
-    height: 1px;
-    background-image: linear-gradient( to right, rgb(177, 177, 177), #777);
-}
-
-.btnPrincip {
-    background-color: #999;
-}
-
-.btnTitulo {
-    margin-left: 20px;
-    margin-top: 10px;
-    width: 230px;
-    font-size: 18px;
-    color: #333;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.iconeBtnTit {
-    margin-top: 15px;
-}
-
-.itensMenu {
-    background-color: rgb(168, 168, 168);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: solid 1px rgb(138, 138, 138);
-}
-
-.baixo {
-    transition: 0.5s;
-}
-
-.cima {
-    transform: rotate(180deg);
-    transition: 0.5s;
-}
-
-@media screen and (max-width: 1024px) {}
-
-@media screen and (max-width: 768px) {
-    .fexar {
-        transition: .2s;
-        margin-left: -300px;
+    .sideBar {
+        background-image: linear-gradient( to right, #777, #999);
+        width: 100%;
+        height: 100%;
     }
-    .abrir {
-        transition: .2s;
-        margin-left: 0px;
-    }
-    .icoenMenu {
+    
+    .login100-form-avatar {
         display: block;
-        background-color: #fff;
-        width: 50px;
-        height: 50px;
-        border-radius: 5px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+        border: solid #777 3px;
+        background-color: rgb(243, 243, 243);
         margin-top: 15px;
-        border: solid 2px #999;
+        margin-bottom: 15px;
     }
-    .iconeDentro {
-        position: absolute;
-        margin-left: 240px;
-        transition: .2s;
+    
+    .login100-form-avatar img {
+        width: 100%;
     }
-    .iconeFora {
-        position: absolute;
-        margin-left: 310px;
-        transition: .2s;
+    
+    .nome {
+        font-size: 20px;
     }
-}
-
-@media screen and (max-width: 500px) {}
-
-@media screen and (max-width: 425px) {}
-
-@media screen and (max-width: 320px) {}
+    
+    .funcao {
+        font-size: 15px;
+    }
+    
+    .risco {
+        width: 80%;
+        margin: auto;
+        height: 4px;
+        background-color: rgb(243, 243, 243);
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    /*botoes sidebar*/
+    
+    .btnPrincip {
+        background-color: #999;
+    }
+    
+    .btnTitulo {
+        margin-left: 20px;
+        margin-top: 10px;
+        width: 230px;
+        font-size: 18px;
+        color: #333;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    .iconeBtnTit {
+        margin-top: 15px;
+    }
+    
+    .itensMenu {
+        background-color: rgb(168, 168, 168);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: solid 1px rgb(138, 138, 138);
+    }
+    
+    .baixo {
+        transition: 0.5s;
+    }
+    
+    .cima {
+        transform: rotate(180deg);
+        transition: 0.5s;
+    }
+    /* icone menu hamburguer*/
+    
+    .icoenMenu {
+        display: none;
+    }
+    
+    .menuH {
+        position: fixed;
+        display: block;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        margin: 0 auto;
+        top: 5px;
+        left: 5px;
+    }
+    
+    .menuH img {
+        width: 100%;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .icoenMenu {
+            display: block;
+        }
+        .fexar {
+            transition: .2s;
+            left: -300px !important;
+            position: fixed;
+        }
+        .abrir {
+            transition: .2s;
+            left: 0px !important;
+            position: fixed;
+        }
+    }

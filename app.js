@@ -23,6 +23,5 @@ app.config(function($routeProvider) {
         .when("/pagina6", {
             templateUrl: "template/p6.html"
         })
-
-    .otherwise({ redirectTo: '/' })
+        .otherwise({ redirectTo: '/' })
 })
