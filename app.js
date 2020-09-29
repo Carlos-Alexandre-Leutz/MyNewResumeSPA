@@ -32,5 +32,8 @@ app.config(function($routeProvider) {
             templateUrl: "template/p6.html"
 
         })
-        .otherwise({ redirectTo: '/' })
+
+
+
+    .otherwise({ redirectTo: '/' })
 })
