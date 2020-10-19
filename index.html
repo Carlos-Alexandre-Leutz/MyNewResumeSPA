@@ -8,6 +8,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3E3W3YSSFK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-3E3W3YSSFK');
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.min.js"></script>
     <script src="app.js"></script>
@@ -26,6 +38,44 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>S.P.A</title>
+    <style>
+        .box-cookies.hide {
+            display: none !important;
+        }
+        
+        .box-cookies {
+            position: fixed;
+            background: rgba(153, 153, 153, 0.795);
+            width: 100%;
+            z-index: 998;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .box-cookies .msg-cookies,
+        .box-cookies .btn-cookies {
+            text-align: center;
+            padding-top: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+            color: #fff;
+            font-size: 18px;
+        }
+        
+        .box-cookies .btn-cookies {
+            background: #333;
+            cursor: pointer;
+            align-self: normal;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .box-cookies {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body ng-app="App">
@@ -191,6 +241,24 @@
             <img src="imagens/WhatsApp-icone.png" alt="">
         </a>
 </span>
+    <div class="box-cookies hide">
+        <p class="msg-cookies">Este site usa cookies para garantir que você obtenha a melhor experiência.</p>
+        <div class="btn-cookies"> Aceitar!</div>
+    </div>
+    <script>
+        if (!localStorage.pureJavaScriptCookies) {
+            document.querySelector(".box-cookies").classList.remove('hide');
+        }
+
+        const acceptCookies = () => {
+            document.querySelector(".box-cookies").classList.add('hide');
+            localStorage.setItem("pureJavaScriptCookies", "accept");
+        };
+
+        const btnCookies = document.querySelector(".btn-cookies");
+
+        btnCookies.addEventListener('click', acceptCookies);
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
