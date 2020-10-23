@@ -1,6 +1,6 @@
 //<--criar função que fexe o nenu quando cricar em um link-->
-//<--funçao para abrir modal com algun aviso a 10 segundos depois de garegar a pagina e um outro quando sair  -->
-//<--Fazer um menu hamburguer que fica emcima da sidebar mais deposi que ela se esonde fina na tela-->
+//<--funçao para abrir modal com algun aviso a 10 segundos depois de caregar a pagina e um outro quando sair  -->
+//<--Fazer um menu hamburguer que fica emcima da sidebar mais deposi que ela se esconde final na tela-->
 
 
 $(".icoenMenu").click(function() {
@@ -9,13 +9,13 @@ $(".icoenMenu").click(function() {
         $('.sideBar').removeClass('abrir');
         $('.sideBar').addClass('fexar');
 
-        console.log('if')
+
 
     } else {
         $('.sideBar').removeClass('fechar');
         $('.sideBar').addClass('abrir');
 
-        console.log('else')
+
     }
 
 
@@ -103,14 +103,13 @@ $(".linkPages").click(function() {
 
 
 
-        console.log('if')
 
 
     } else {
 
         $('.sideBar').addClass('fexar');
         $('.sideBar').addClass('fexar');
-        console.log('else');
+
 
 
     }
